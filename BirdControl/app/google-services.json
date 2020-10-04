@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750134570339",
+    "firebase_url": "https://detection-3dc9d.firebaseio.com",
+    "project_id": "detection-3dc9d",
+    "storage_bucket": "detection-3dc9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750134570339:android:879ffbb8780ce26ff2b756",
+        "android_client_info": {
+          "package_name": "com.test.birdcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750134570339-ag950mrms2h4ik01h1vpoln20l8vo50e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNl5mRQJjYBHdUSr0lblHwZbk_O7NQUXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750134570339-ag950mrms2h4ik01h1vpoln20l8vo50e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

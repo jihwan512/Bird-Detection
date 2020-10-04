@@ -1,0 +1,2 @@
+rootProject.name='Bird Control'
+include ':app'
