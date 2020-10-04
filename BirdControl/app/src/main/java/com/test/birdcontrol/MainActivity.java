@@ -52,7 +52,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
