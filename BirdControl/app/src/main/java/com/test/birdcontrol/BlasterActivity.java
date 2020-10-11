@@ -1,8 +1,10 @@
 package com.test.birdcontrol;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,12 +18,26 @@ public class BlasterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blaster);
         myRef = FirebaseDatabase.getInstance().getReference("buzzerTest");
-        Button b10 = (Button)findViewById(R.id.button10);
-        b10.setOnClickListener(new View.OnClickListener() {
+        Switch aSwitch = (Switch)findViewById(R.id.simple_switch);
+        final ImageView imageView = (ImageView)findViewById(R.id.imageView1);
+
+        //스위치 클릭
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                myRef.setValue(1);
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked == true) {
+                    Toast.makeText(BlasterActivity.this, "스위치-ON", Toast.LENGTH_SHORT).show();
+                    imageView.setImageResource(R.drawable.speaker);
+                    myRef.setValue(1);
+
+                } else {
+                    Toast.makeText(BlasterActivity.this, "스위치-OFF", Toast.LENGTH_SHORT).show();
+                    imageView.setImageResource(R.drawable.speaker_off);
+                    myRef.setValue(0);
+                }
             }
         });
-    }
+
+
+        }
 }
