@@ -34,6 +34,7 @@ String sendPacket = "";
 
 int buzzer = 0;
 String data1 = "";
+int isFirst = 0;
 
 String _log[5];
 
@@ -89,9 +90,6 @@ void loop() {
     _log[0] = receivePacket.substring(0,21);
     _log[1] = receivePacket.substring(21,26);
     _log[2] = receivePacket.substring(28,33);
-//    Serial.println(_log[0]);
-//    Serial.println(_log[1]);
-//    Serial.println(_log[2]);
 
     // append a new value to /logs
     String name = Firebase.pushInt("logs/"+_log[1]+"/"+_log[2], 1);
@@ -120,33 +118,23 @@ void loop() {
     displayReceivePacket();
     packetSize = 0;
   }
-
-
-
-
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
   sendPacket = String(Firebase.getInt("buzzerTest"));
-  if(sendPacket == "1"){
+  if(sendPacket == "1" || (sendPacket == "0" && isFirst == 1)){
     //send Packet to raspi 패킷 전송
     LoRa.beginPacket();
     LoRa.setTxPower(14,RF_PACONFIG_PASELECT_PABOOST);
 //    LoRa.print("From server\n");
     LoRa.println(sendPacket);
     LoRa.endPacket();
-    delay(3000);
     
-    Firebase.setInt("buzzerTest", 0);
-    sendPacket = "0";
-    LoRa.beginPacket();
-    LoRa.setTxPower(14,RF_PACONFIG_PASELECT_PABOOST);
-    LoRa.println(sendPacket);
-    LoRa.endPacket();
-    
-    if (Firebase.failed()) {
-      Serial.print("setting /number failed:");
-      Serial.println(Firebase.error());  
-      return;
+  if(sendPacket == "1"){
+    isFirst = 1;
+  }else{
+    isFirst = 0;
   }
-
     //display print
     displaySendPacket();
     sendPacket = "";
