@@ -36,6 +36,7 @@
 ## 데모
   + 조류 탐지 데모
   <img src="https://user-images.githubusercontent.com/43876552/98137112-fa069e00-1f04-11eb-995c-04ed75138c7a.gif">
-  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/OvVLnwNU-vY/0.jpg)](https://www.youtube.com/watch?v=OvVLnwNU-vY)
+  [link text](https://www.youtube.com/watch?v=OvVLnwNU-vY)
+
   + 사용자 제어 데모
   <img src="https://user-images.githubusercontent.com/43876552/98137377-4225c080-1f05-11eb-8aba-d87a202a609c.gif">
