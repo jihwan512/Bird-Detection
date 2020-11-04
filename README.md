@@ -36,6 +36,6 @@
 ## 데모
   + 조류 탐지 데모
   <img src="https://user-images.githubusercontent.com/43876552/98137112-fa069e00-1f04-11eb-995c-04ed75138c7a.gif">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OvVLnwNU-vY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/OvVLnwNU-vY" frameborder="0" gesture="media" allowfullscreen=""></iframe>
   + 사용자 제어 데모
   <img src="https://user-images.githubusercontent.com/43876552/98137377-4225c080-1f05-11eb-8aba-d87a202a609c.gif">
