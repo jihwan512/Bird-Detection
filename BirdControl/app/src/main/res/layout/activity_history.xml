@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_marginTop="150dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seekBar1" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="history"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="217dp"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="40sp"
+        android:fontFamily="@font/nanumsquareroundeb"
+        android:text="History"
+        android:textColor="#464646" />
+
+</RelativeLayout>
