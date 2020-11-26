@@ -11,13 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher1_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ListViewAdapter"></activity>
+        <activity android:name=".ListViewItem" />
         <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChartActivity" />
+        <activity android:name=".BirdInfoActivity" />
         <activity android:name=".BlasterActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".MainActivity">
